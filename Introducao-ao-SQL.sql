@@ -133,3 +133,83 @@ INSERT INTO TABELA_DE_VENDEDORES (
 );
 
 SELECT * FROM TABELA_DE_VENDEDORES;
+
+INSERT INTO TB_PRODUTOS (
+    PRODUTO,
+    NOME,
+    EMBALAGEM,
+    TAMANHO,
+    SABOR,
+    PRECO_LISTA
+)
+VALUES (
+    '544931',
+    'Frescor do Verão - 350 ml - Limão',
+    'PET',
+    '350 ml',
+    'Limão',
+    3.20
+);
+
+INSERT INTO TB_PRODUTOS (
+    PRODUTO,
+    NOME,
+    EMBALAGEM,
+    TAMANHO,
+    SABOR,
+    PRECO_LISTA
+)
+VALUES (
+    '1078680',
+    'Frescor do Verão - 470 ml - Manga',
+    'Lata',
+    '470 ml',
+    'Manga',
+    5.18
+);
+
+SELECT * FROM TB_PRODUTOS;
+
+UPDATE TB_PRODUTOS
+    SET
+        EMBALAGEM = 'Lata',
+        PRECO_LISTA = 2.46
+    WHERE
+        PRODUTO = '544931';
+
+UPDATE TB_PRODUTOS
+    SET
+        EMBALAGEM = 'Garrafa'
+    WHERE
+        PRODUTO = '1078680';
+
+SELECT * FROM TB_PRODUTOS;
+
+UPDATE TABELA_DE_VENDEDORES
+    SET
+        PERCENTUAL_COMISSAO = 0.11
+    WHERE
+        MATRICULA = '00236';
+        
+UPDATE TABELA_DE_VENDEDORES
+    SET
+        NOME = 'José Geraldo da Fonseca Junior'
+    WHERE
+        MATRICULA = '00233';
+
+SELECT * FROM TABELA_DE_VENDEDORES;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
